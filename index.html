@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Detection</title>
+</head>
+<body>
+    <h1>Object Detection</h1>
+    <button onclick="runDetection()">Run Detection</button>
+
+    <script>
+        function runDetection() {
+            fetch('/run_detection')
+                .then(response => response.text())
+                .then(data => alert(data))
+                .catch(error => console.error(error));
+        }
+    </script>
+</body>
+</html>
